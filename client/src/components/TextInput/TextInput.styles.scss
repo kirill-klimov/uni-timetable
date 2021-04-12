@@ -1,0 +1,22 @@
+.my-text-input {
+  border: 1px solid var(--text-color);
+  outline: none;
+  background-color: transparent;
+  padding: 10px 20px;
+  font-family: "Montserrat", sans-serif;
+  border-radius: 100px;
+  font-size: 14px;
+  color: var(--input-text);
+  transition: all 0.2s;
+
+  max-width: 500px;
+
+  &::placeholder {
+    color: var(--text-color);
+  }
+
+  &:focus {
+    border: 1px solid var(--input-text);
+    box-shadow: 0 0 0 0.5px var(--input-text);
+  }
+}

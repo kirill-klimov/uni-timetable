@@ -1,0 +1,21 @@
+.arrow-back-icon {
+  cursor: pointer;
+  overflow: visible;
+  path {
+    transition: all 0.2s;
+    fill: var(--ui-icon);
+  }
+
+  &:hover path {
+    transform: translateX(-5px);
+  }
+}
+
+.settings-menu {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  box-shadow: -20px 0 0 20px var(--menu-bg);
+  z-index: 100;
+}

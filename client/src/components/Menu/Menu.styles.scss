@@ -1,0 +1,74 @@
+.settings-icon {
+  transition: all 0.2s;
+  cursor: pointer;
+
+  &:hover {
+    transition: all 0.3s;
+    transform: rotate(60deg);
+  }
+
+  path {
+    fill: var(--ui-icon);
+  }
+}
+
+.menu-block_titled {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.menu-block_titled__title {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.menu-block__group-link {
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+  transition: all 0.1s;
+
+  &:hover {
+    color: var(--text-color_hover);
+  }
+}
+
+.menu-block__group-link.active {
+  color: var(--text-color_active);
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    background-color: var(--accent);
+    left: -20px;
+  }
+}
+
+.group-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  max-height: 50vh;
+
+  margin-left: -20px;
+  padding-left: 20px;
+
+  @media (max-width: 729px) {
+    max-height: 30vh;
+  }
+}
+
+.menu__control-block.right {
+  text-align: right;
+}
+
+.menu-block__name {
+  font-weight: 600;
+  font-size: 16px;
+}

@@ -1,0 +1,89 @@
+.app {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+}
+
+.app__menu {
+  width: var(--menu-width);
+  background-color: var(--menu-bg);
+
+  display: flex;
+  flex-direction: column;
+  row-gap: 35px;
+  padding: 20px 20px 50px;
+}
+
+.app__main-container {
+  flex-grow: 1;
+  background-color: #181818;
+  padding: 20px 30px;
+
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  align-items: flex-start;
+}
+
+.gradient-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 235px;
+  margin: -20px -30px;
+  padding: 20px 30px;
+  align-self: stretch;
+
+  background: linear-gradient(
+    180deg,
+    var(--gradient-start),
+    var(--gradient-end)
+  );
+
+  & > div:last-of-type > *:nth-last-child(1) {
+    // remove header(h1) margin if it is the last element
+    // when user is not logged in
+    margin-bottom: 0;
+  }
+}
+
+.footer {
+  text-align: center;
+  align-self: stretch;
+  margin-top: auto;
+  padding-top: 50px;
+}
+
+.footer__text {
+  font-size: 14px;
+  color: var(--footer-text);
+  line-height: 1.2rem;
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 729px) {
+  .app {
+    flex-direction: column;
+  }
+
+  .app__main-container {
+    padding: 20px 20px 50px;
+  }
+
+  .app__menu {
+    width: 100%;
+
+    &:not(.settings-menu) {
+      background: linear-gradient(
+        0deg,
+        var(--gradient-start) 0%,
+        var(--menu-bg) 15%
+      );
+    }
+  }
+
+  .gradient-container {
+    margin: -20px;
+    padding: 20px;
+  }
+}

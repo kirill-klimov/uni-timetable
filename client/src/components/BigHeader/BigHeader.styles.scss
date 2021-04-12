@@ -1,0 +1,11 @@
+.big-header {
+  margin: 0 0 20px;
+  font-size: 40px;
+  color: var(--header-text);
+}
+
+@media (max-width: 729px) {
+  .big-header {
+    font-size: 30px;
+  }
+}

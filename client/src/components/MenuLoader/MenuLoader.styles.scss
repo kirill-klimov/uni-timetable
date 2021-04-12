@@ -1,0 +1,16 @@
+.menu-loader {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: var(--menu-bg_transparent);
+  width: var(--menu-width);
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (max-width: 991px) {
+    width: 100%;
+  }
+}

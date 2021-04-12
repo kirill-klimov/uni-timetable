@@ -1,0 +1,50 @@
+.timetable {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+  flex-grow: 1;
+  padding-right: 10px;
+  margin-top: 20px;
+}
+
+// .timetable__day {
+// }
+
+.timetable__day__name {
+  color: var(--header-text);
+  font-weight: 700;
+  font-size: 22px;
+  margin: 0 0 15px;
+}
+
+.classes-table__header,
+.classes-table__content {
+  display: grid;
+  column-gap: 10px;
+  grid-template-columns: 35px 1fr 60px;
+}
+
+.classes-table__content {
+  border-top: 1px solid var(--table-row-div);
+}
+
+.classes-table__header__column,
+.classes-table__content__column {
+  padding: 10px 0;
+  &:first-of-type,
+  &:last-of-type {
+    text-align: center;
+  }
+}
+
+.classes-table__header__column {
+  font-size: 12px;
+}
+
+.classes-table__content__column {
+  color: var(--header-text);
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}

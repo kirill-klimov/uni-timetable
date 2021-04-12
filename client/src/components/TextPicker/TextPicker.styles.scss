@@ -1,0 +1,47 @@
+.text-picker {
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+}
+
+.text-picker__label {
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.text-picker__options {
+  display: flex;
+  align-items: center;
+  border-radius: 100px;
+  overflow: hidden;
+}
+
+.options__item {
+  border: none;
+  background-color: transparent;
+  color: var(--text-color);
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  border: 1px solid var(--text-color);
+  padding: 5px 20px;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.1s;
+  z-index: 2;
+
+  &.active {
+    color: var(--text-color_active);
+    // background-color: var(--accent);
+    border-color: transparent;
+  }
+
+  &:first-of-type {
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+  }
+
+  &:last-of-type {
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+  }
+}
